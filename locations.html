@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Locations</title>
+    <meta name="author" content="Surjith S M">
+
+    <!-- SEO -->
+    <meta name="description" content="Tomato is a Responsive HTML5 Template for Restaurants and food related services.">
+    <meta name="keywords" content="tomato, responsive, html5, restaurant, template, food, reservation">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- Responsive Tag -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+    
+
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <!-- Preloder-->
+    <div class="preloder animated">
+        <div class="scoket">
+            <img src="img/preloader.svg" alt="" />
+        </div>
+    </div>
+
+    <div class="body">
+
+        <div class="main-wrapper">
+            <!-- Navigation-->
+            <nav class="navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="img/TE/logo/logoname1.png" alt="nav-logo">
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order Now <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Tennessee <span class="caret-right"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="https://order.toasttab.com/online/thai-esane">Midtown</a></li>
+                                            <li><a href="https://order.toasttab.com/online/thai-esane-203-suite-100-franklin-road">Brentwood</a></li>
+                                            <li><a href="">Esane East <br>Coming Soon!</a></li>
+                                            <li><a href="https://order.toasttab.com/online/assembly-food-hall-nashville-thai-esane">Assembly Food Hall</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">California <span class="caret-right"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="">Enclave<br>Coming Soon!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Oregon <span class="caret-right"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="">Valley River Center<br>Coming Soon! </a></li>
+                                            <li><a href="">Washington Square<br>Coming Soon! </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            
+                            <li><a href="./menu_select.html">Menus</a></li>
+                            <li><a href="https://thai-esane.printify.me/products">Shop</a></li>
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown" 
+                                role="button" aria-haspopup="true" aria-expanded="false">Thai Esane Rewards<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Coming Soon!</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./locations.html">Locations</a></li>
+                            <li class="dropdown">
+                                <a href="contact.html" class="dropdown-toggle" data-toggle="dropdown" 
+                                role="button" aria-haspopup="true" aria-expanded="false">Contact Us<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="catering.html">Catering</a></li>
+                                    <li><a href="contactjob.html">Jobs</a></li>
+                                    <li><a href="">Franchise<br> Coming Soon!</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.navbar-collapse -->
+                </div>
+            </nav>
+
+            <!-- Page Header -->
+            <section class="page_header2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="text-uppercase font-crushed">Locations</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- 
+            <img src="/img/TE/borders/2.png" alt="Border Image" style="width: 100%; display: block; margin-top: -10px;">
+             -->
+
+            <section class="menu menu2">
+                <div class="container">
+                    <div class="padding-tb-40">
+                        <div class="padding-tb-75">
+                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                <img alt="Multiple Stores Icon" src="/img/TE/map/Buddha_Icon1.png" height="55" width="55">
+                                Multiple Stores
+                            </div>
+                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                <img alt="Multiple Stores Icon" src="/img/TE/map/Buddha_Icon2.png" height="55" width="55">
+                                Coming Soon
+                            </div>
+                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                <img alt="Multiple Stores Icon" src="/img/TE/map/Buddha_Icon3.png" height="55" width="55">
+                                Food Hall - Opened
+                            </div>
+                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                <img alt="Multiple Stores Icon" src="/img/TE/map/Buddha_Icon4.png" height="55" width="55">
+                                Brick & Mortar - Opened
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row padding-tb-20">
+                        <div class="col-md-12">
+                            <div id="map" class="map-container"></div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="food-menu wow fadeInUp">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="menu-tags2">
+                                    <span data-filter="*" class="tagsort2-active">All</span>
+                                    <span data-filter=".tennessee">Tennessee</span>
+                                    <span data-filter=".california">California</span>
+                                    <span data-filter=".oregon">Oregon</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row menu-items2">
+                            <!-- Tennessee Location -->
+                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
+                                <div class="menu-info">
+                                    <img src="img/TE/restaurant/mtinterior.jpg" class="img-responsive" alt="Tennessee Location" />
+                                    <div class="location-info">
+                                        <h4>Midtown</h4>
+                                        <div class="address">
+                                            <p><i class="fa fa-map-marker"></i> <a href="https://www.google.com/maps?q=1520+Division+Street,+Nashville,+TN+37203" target="_blank">1520 Division Street,
+                                                Nashville, TN 37203</a>
+                                            </p>
+                                        </div>
+                                        <div class="phone">
+                                            <p><i class="fa fa-phone"></i> <a href="tel:1234567890">(615) 454-5373</a></p>
+                                        </div>
+                                        <div class="hours">
+                                            <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
+                                            <p>11:00 am - 9:00 pm</p>
+                                        </div>
+                                        <div class="buttons">
+                                            <a href="img/TE/Menu.pdf" class="btn btn-menu">View Menu</a>
+                                            <a href="https://order.toasttab.com/online/thai-esane" class="btn btn-order">Order Online</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
+                                <div class="menu-info">
+                                    <img src="img/TE/restaurant/Brentwood/6.png" class="img-responsive" alt="Tennessee Location"/>
+                                    <div class="location-info">
+                                        <h4>Brentwood</h4>
+                                        <div class="address">
+                                            <p><i class="fa fa-map-marker"></i> <a href="https://www.google.com/maps?q=203+Franklin+Rd+Suite+100+Brentwood,+TN+37027" target="_blank">203 Franklin Rd Suite 100
+                                                Brentwood, TN 37027</a></p>
+                                        </div>
+                                        <div class="phone">
+                                            <p><i class="fa fa-phone"></i><a href="tel:1234567890">(615) 915-4736</a></p>
+                                        </div>
+                                        <div class="hours">
+                                            <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
+                                            <p>11:00 am - 9:00 pm</p>
+                                        </div>
+                                        <div class="buttons">
+                                            <a href="img/TE/Menu.pdf" class="btn btn-menu">View Menu</a>
+                                            <a href="https://order.toasttab.com/online/thai-esane-203-suite-100-franklin-road" class="btn btn-order">Order Online</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
+                                <div class="menu-info">
+                                    <img src="img/TE/restaurant/FoodHallEx.png" class="img-responsive" alt="Tennessee Location" />
+                                    <div class="location-info">
+                                        <h4>Assembly Food Hall</h4>
+                                        <div class="address">
+                                            <p><i class="fa fa-map-marker"></i> <a href="https://www.google.com/maps?q=5036+Broadway,+Nashville,+TN+37203" target="_blank">5036 Broadway, Nashville, TN 37203</a></p>
+                                        </div>
+                                        <div class="hours">
+                                            <p><i class="fa fa-clock"></i> Sunday - Saturday:</p>
+                                            <p>11:00 am - 9:00 pm</p>
+                                        </div>
+                                        <div class="buttons">
+                                            <a href="./menufh.html" class="btn btn-menu">View Menu</a>
+                                            <a href="https://order.toasttab.com/online/assembly-food-hall-nashville-thai-esane" class="btn btn-order">Order Online</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
+                                <div class="menu-info">
+                                    <img src="img/TE/restaurant/BarEast/2.png" class="img-responsive" alt="Tennessee Location" />
+                                    <div class="location-info">
+                                        <h4>Thai Esane East</h4>
+                                        <div class="address">
+                                            <p><i class="fa fa-map-marker"></i> 970 Woodland St, Nashville, TN 37206, USA</p>
+                                        </div>
+                                        <div class="phone">
+                                            <p><i class="fa fa-phone"></i></p>
+                                        </div>
+                                        <div class="hours">
+                                            <!-- <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
+                                            <p>11:00 am - 9:00 pm</p> -->
+                                        </div>
+                                        <div class="buttons">
+                                            <!-- <a href="./menu.html" class="btn btn-menu">View Menu</a>
+                                            <a href="./order_tennessee.html" class="btn btn-order">Order Online</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <!-- California Location -->
+
+                            <div class="menu-item2 col-sm-4 col-xs-12 california">
+                                <div class="menu-info">
+                                    <img src="img/menu/1/1.1.png" class="img-responsive" alt="Enclave Location" />
+                                    <div class="location-info">
+                                        <h4>Thai Esane Enclave</h4>
+                                        <div class="address">
+                                            <p><i class="fa fa-map-marker"></i> 980 W 190th St, Los Angeles, California, 90502</p>
+                                        </div>
+                                        <div class="phone">
+                                            <p><i class="fa fa-phone"></i></p>
+                                        </div>
+                                        <div class="buttons">
+                                            <a href="./menufh.html" class="btn btn-view">View Menu</a>
+                                            <!-- <a href="./order_california.html" class="btn btn-order">Order Online</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                           <!-- Oregon Location -->
+                            <div class="menu-item2 col-sm-4 col-xs-12 oregon">
+                                <div class="menu-info">
+                                    <img src="img/menu/1/1.1.png" class="img-responsive" alt="Valley River Center Location" />
+                                    <div class="location-info">
+                                        <h4>Thai Esane Valley River Center</h4>
+                                        <div class="address">
+                                            <p><i class="fa fa-map-marker"></i> 293 Valley River Center, Eugene, OR 97401</p>
+                                        </div>
+                                        <!-- Assuming phone number and hours are the same, but you can change them -->
+                                        <div class="phone">
+                                            <p><i class="fa fa-phone"></i></p>
+                                        </div>
+                                        <!-- <div class="hours">
+                                            <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
+                                            <p>Coming Soon!</p>
+                                        </div> -->
+                                        <div class="buttons">
+                                            <a href="./menufh.html" class="btn btn-menu">View Menu</a>
+                                            <!-- <a href="./order_oregon.html" class="btn btn-order">Order Online</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item2 col-sm-4 col-xs-12 oregon">
+                                <div class="menu-info">
+                                    <img src="img/menu/1/1.1.png" class="img-responsive" alt="Washington Square Location" />
+                                    <div class="location-info">
+                                        <h4>Thai Esane Washington Square</h4>
+                                        <div class="address">
+                                            <p><i class="fa fa-map-marker"></i> 9585 SW Washington Square Rd, Portland, OR 97223</p>
+                                        </div>
+                                        <div class="phone">
+                                            <p><i class="fa fa-phone"></i></p>
+                                        </div>
+                                        <!-- <div class="hours">
+                                            <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
+                                            <p>Coming Soon!</p>
+                                        </div> -->
+                                        <div class="buttons">
+                                            <a href="./menufh.html" class="btn btn-menu">View Menu</a>
+                                            <!-- <a href="./order_oregon.html" class="btn btn-order">Order Online</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!-- Footer-->
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <h1>About us</h1>
+                            <p>Welcome to Thai Esane, where the vibrant flavors of Thai-Laotian cuisine meet the heart of Nashville. 
+                                Born from the Sayasack family's journey from Isan to America, our dishes are a testament to tradition, 
+                                resilience, and love. Dive into our world of unapologetically authentic flavors, where every bite tells a story.</p>
+                            <a href="./about.html">Read more &rarr;</a>
+                        </div>
+                        <div class="col-md-4  col-sm-6">
+                            <!-- <h1>Recent post</h1>
+                            <div class="footer-blog clearfix">
+                                <a href="./blog_right_sidebar.html">
+                                    <img src="img/thumb8.png" class="img-responsive footer-photo" alt="Placeholder Image">
+                                    <p class="footer-blog-text">Events & News Coming Soon!</p>
+                                    <p class="footer-blog-date">Stay Tuned</p>
+                                </a>
+                            </div>
+                            <div class="footer-blog clearfix last">
+                                <a href="./blog_right_sidebar.html">
+                                    <img src="img/thumb8.png" class="img-responsive footer-photo" alt="Placeholder Image">
+                                    <p class="footer-blog-text">Events & News Coming Soon!</p>
+                                    <p class="footer-blog-date">Stay Tuned</p>
+                                </a>
+                            </div> -->
+                            <div class="footer-links">
+                                <p><a href="./contactjob.html" class="footer-link">Jobs</a></p>
+                                <p><a href="./locations.html" class="footer-link">Locations</a></p>
+                                <p><a href="./contact.html" class="footer-link">Contact</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4  col-sm-6">
+                            <h1>Follow us</h1>
+                            <div class="footer-social-icons">
+                                <a href="https://www.instagram.com/thaiesane/?hl=en">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </div>
+                            <!-- <div class="footer-address">
+                                <p><i class="fa fa-envelope-o"></i></p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer - Copyright -->
+                <div class="footer-copyrights">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p><i class="fa fa-copyright"></i> 2023.Thai Esane .All rights reserved. Designed with <i class="fa fa-heart primary-color"></i> by Leons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div> 
+
+    <!-- Javascript -->
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery.flexslider-min.js"></script>
+    <script src="js/vendor/spectragram.js"></script>
+    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="js/vendor/velocity.min.js"></script>
+    <script src="js/vendor/velocity.ui.min.js"></script>
+    <script src="js/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="js/vendor/bootstrap-clockpicker.min.js"></script>
+    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/vendor/vegas/vegas.min.js"></script>
+    <script src="js/vendor/jquery.mb.YTPlayer.js"></script>
+    <script src="js/vendor/jquery.stellar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/mc/jquery.ketchup.all.min.js"></script>
+    <script src="js/vendor/mc/main.js"></script>
+
+    <script type="text/javascript">
+        var initialZoom = getComputedStyle(document.documentElement).getPropertyValue('--initial-zoom').trim();
+        var mymap = L.map('map', { scrollWheelZoom: false }).setView([39.8283, -98.5795], initialZoom); // Set initial view
+      // Set initial view to Nashville
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap);
+    
+        var stores = [
+            {
+                lat: 36.1628,
+                lon: -86.7832,
+                name: "Midtown",
+                details: "1520 Division St, Nashville, TN 37203, USA",
+                type: 'type3',
+                phone: '(615) 123 4567',
+                orderOnlineUrl: 'https://order.toasttab.com/online/thai-esane',
+                storeDetailsUrl: 'img/TE/Menu.pdf',
+                directionsUrl: null,
+            },
+            {
+                lat: 36.0331,
+                lon: -86.7828,
+                name: "Brentwood",
+                details: "203 Franklin Rd suite 100, Brentwood, TN 37027, USA",
+                type: 'type3',
+                phone: '(615) 123 4567',
+                orderOnlineUrl: 'https://order.toasttab.com/online/thai-esane-203-suite-100-franklin-road',
+                storeDetailsUrl: 'img/TE/Menu.pdf',
+                directionsUrl: null,
+            },
+            {
+                lat: 36.1780,
+                lon: -86.7509,
+                name: "Esane East",
+                details: "970 Woodland St, Nashville, TN 37206, USA",
+                type: 'type2',
+                phone: null,
+                orderOnlineUrl: null,
+                storeDetailsUrl: null,
+                directionsUrl: null,
+            },
+            {
+                lat: 36.1627,
+                lon: -86.7743,
+                name: "Assembly Food Hall",
+                details: " 5036 Broadway, Nashville, TN 37203",
+                type: 'type3',
+                phone: null,
+                orderOnlineUrl: './menufh.html',
+                storeDetailsUrl: 'https://order.toasttab.com/online/assembly-food-hall-nashville-thai-esane',
+                directionsUrl: null,
+            },
+            {
+                lat: 44.0631,
+                lon: -123.0825,
+                name: "Valley River Center",
+                details: "293 Valley River Center, Eugene, OR 97401",
+                type: 'type2',
+                phone: null,
+                orderOnlineUrl: null,
+                storeDetailsUrl: null,
+                directionsUrl: null,
+            },
+            {
+                lat: 45.4503,
+                lon: -122.7780,
+                name: "Washington Square",
+                details: "9585 SW Washington Square Rd, Portland, OR 97223",
+                type: 'type2',
+                phone: null,
+                orderOnlineUrl: null,
+                storeDetailsUrl: null,
+                directionsUrl: null,
+            },
+            {
+                lat: 33.8572,
+                lon: -118.2901,
+                name: "Enclave",
+                details: "980 W 190th St, Los Angeles, California, 90502",
+                type: 'type2',
+                phone: null,
+                orderOnlineUrl: null,
+                storeDetailsUrl: null,
+                directionsUrl: null,
+            }
+        ];
+
+        var icons = {
+        type1: 'img/TE/map/Buddha_Icon1.png',
+        type2: 'img/TE/map/Buddha_Icon2.png',
+        type3: 'img/TE/map/Buddha_Icon3.png',
+        type3: 'img/TE/map/Buddha_Icon4.png'
+        };
+
+        var iconSizes = {
+        type1: [48, 48],
+        type2: [45, 45],
+        type3: [45, 45],
+        type4: [45, 45]
+        };
+
+        function getIcon(type) {
+            return L.icon({
+                iconUrl: icons[type],
+                iconSize: iconSizes[type]
+            });
+        }
+
+        
+
+        var markers = L.markerClusterGroup({
+        iconCreateFunction: function(cluster) {
+            return new L.Icon({
+                iconUrl: 'img/TE/map/Buddha_Icon1.png',  // replace with your cluster icon path
+                iconSize: [55, 55]  // replace with your cluster icon dimensions
+            });
+        }
+    });
+
+    for (var i = 0; i < stores.length; i++) {
+    var store = stores[i];
+    var marker = L.marker([store.lat, store.lon], {icon: getIcon(store.type)});
+    marker.bindPopup(
+        '<div class="store-card">' +
+            '<div class="store-info">' +
+                '<b>' + store.name + '</b><br>' +
+                '<i class="fa fa-map-marker"></i> ' + /* FA Address Icon */
+                '<a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(store.details) + '">' +
+                    store.details.replace(/, /g, '<br>') +
+                '</a><br>' +
+                (store.phone ? 
+                    ('<i class="fa fa-phone"></i> ' + /* FA Phone Icon */
+                    '<a href="tel:' + store.phone + '">' + store.phone + '</a>') : 
+                    ''
+                ) +
+                '</div>' +
+                '<div class="store-buttons2">' +
+                    (store.orderOnlineUrl ? 
+                        ('<a href="' + store.orderOnlineUrl + '" class="btn order-online">Order Online</a>') : 
+                        ''
+                    ) +
+                    (store.storeDetailsUrl ? 
+                        ('<a href="' + store.storeDetailsUrl + '" class="btn store-details">View Menu</a>') : 
+                        ''
+                    ) +
+                    (store.directionsUrl ? 
+                        ('<a href="' + store.directionsUrl + '" class="btn directions">Directions</a>') : 
+                        ''
+                    ) +
+                '</div>' +
+                '</div>'
+
+    );
+    markers.addLayer(marker);
+    }
+    mymap.addLayer(markers);
+    </script>
+
+</body>
+
+</html>
