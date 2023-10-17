@@ -1011,7 +1011,7 @@ fieldset[disabled] .btn-default.active {
         position: relative;
         height: 70vh;
         width: 100%;
-        background: url(../img/TE/logo/bg/goldbg.png) repeat center center;
+        background: url(../img/TE/logo/bg/goldbg.webp) repeat center center;
         /* background-size: cover; Remove this line or set it to auto */
         background-size: auto;  /* Optional: This line is not necessary as auto is the default value */
     }
@@ -1151,7 +1151,7 @@ fieldset[disabled] .btn-default.active {
     position: relative;
     height: 60vh;
     width: 100%;
-    background: url(../img/TE/hqphoto/PadKaPowTop.png) no-repeat center center fixed !important;
+    background: url(../img/TE/hqphoto/PadKaPowTop.webp) no-repeat center center fixed !important;
     background-size: cover !important;
 }
 
@@ -1159,7 +1159,7 @@ fieldset[disabled] .btn-default.active {
 @media (max-width: 768px) {
     .home2 {
         height: 60vh;
-        background: url(../img/TE/hqphoto/PadKaPowTop.png) no-repeat center center fixed !important;
+        background: url(../img/TE/hqphoto/PadKaPowTop.webp) no-repeat center center fixed !important;
         background-size: cover !important;  /* Adjusted height for mobile devices */
     }
 }
@@ -1310,7 +1310,7 @@ fieldset[disabled] .btn-default.active {
     position: relative;
     height: 70vh;
     width: 100%;
-    background: url(../img/TE/logo/bg/goldbg.png) no-repeat center center fixed; /* Adjusted this line */
+    background: url(../img/TE/logo/bg/goldbg.webp) no-repeat center center fixed; /* Adjusted this line */
     background-size: cover;  /* Adjusted this line */ /* Optional: This line is not necessary as auto is the default value */
 }
 
@@ -1764,7 +1764,12 @@ fieldset[disabled] .btn-default.active {
     width: 100%;
     z-index: -1;
 }
-
+@media (max-width: 768px) { /* Adjust this value to target different screen sizes */
+    .menu .food-menu .menu-item .dotted-bg,
+    .menu .food-menu .menu-item3 .dotted-bg {
+        max-width: 200px; /* Or whatever maximum width you want for mobile */
+    }
+}
 .menu .food-menu .menu-item .menu-wrapper,
 .menu .food-menu .menu-item3 .menu-wrapper {
     position: relative;
@@ -4843,7 +4848,7 @@ article.blog-mason-item p {
 }
 
 body.boxed-wrap {
-    background: #000 url("../img/pattern/wood_pattern.png")
+    background: #000 url("../img/pattern/wood_pattern.webp")
 }
 
 .body.boxed .navbar {
@@ -5161,4 +5166,15 @@ z-index: 1;
     height: 100%;
     width: 100%;
     position: fixed;
+}
+
+.card-container {
+    background-color: #fff; /* or any color you prefer */
+    border: 1px solid #ccc; /* adjust border color as needed */
+    border-radius: 8px; /* rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow for depth */
+    padding: 20px; /* inner spacing */
+    margin: 20px auto; /* centered with some spacing from other elements */
+    max-width: 1200px; /* adjust max-width to fit your design */
+    overflow: auto; /* in case the content overflows the container */
 }

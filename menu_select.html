@@ -11,7 +11,7 @@
     <meta name="keywords" content="tomato, responsive, html5, restaurant, template, food, reservation">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/TE/icons/BuddhaIcon.webp">
 
     <!-- Responsive Tag -->
     <meta name="viewport" content="width=device-width">
@@ -59,7 +59,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="./index.html">
-                            <img src="img/TE/logo/logoname1.png" alt="nav-logo">
+                            <img src="img/TE/logo/logoname1.webp" alt="nav-logo">
                         </a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
@@ -144,19 +144,19 @@
                         </div>
                         <div class="padding-tb-75">
                             <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/1.png" height="55" width="55">
+                                <img alt="Multiple Stores Icon" src="img/TE/map2/1.webp" height="55" width="55">
                                 Multiple Stores
                             </div>
                             <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/2.png" height="55" width="55">
+                                <img alt="Multiple Stores Icon" src="img/TE/map2/2.webp" height="55" width="55">
                                 Coming Soon
                             </div>
                             <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/3.png" height="55" width="55">
+                                <img alt="Multiple Stores Icon" src="img/TE/map2/3.webp" height="55" width="55">
                                 Food Hall - Opened
                             </div>
                             <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/4.png" height="55" width="55">
+                                <img alt="Multiple Stores Icon" src="img/TE/map2/4.webp" height="55" width="55">
                                 Brick & Mortar - Opened
                             </div>
                         </div>
@@ -183,7 +183,7 @@
                             <!-- Tennessee Location -->
                             <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
                                 <div class="menu-info">
-                                    <img src="img/TE/restaurant/mtinterior.jpg" class="img-responsive" alt="Tennessee Location" />
+                                    <img src="img/TE/restaurant/mtinterior.webp" class="img-responsive" alt="Tennessee Location" />
                                     <div class="location-info">
                                         <h4>Midtown</h4>
                                         <div class="address">
@@ -200,7 +200,7 @@
                             </div>
                             <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
                                 <div class="menu-info">
-                                    <img src="img/TE/restaurant/Brentwood/6.png" class="img-responsive" alt="Tennessee Location"/>
+                                    <img src="img/TE/restaurant/Brentwood/6 (1).webp" class="img-responsive" alt="Tennessee Location"/>
                                     <div class="location-info">
                                         <h4>Brentwood</h4>
                                         <div class="address">
@@ -216,7 +216,7 @@
                             </div>
                             <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
                                 <div class="menu-info">
-                                    <img src="img/TE/restaurant/FoodHallEx.png" class="img-responsive" alt="Tennessee Location" />
+                                    <img src="img/TE/restaurant/FoodHallEx.webp" class="img-responsive" alt="Tennessee Location" />
                                     <div class="location-info">
                                         <h4>Assembly Food Hall</h4>
                                         <div class="address">
@@ -231,7 +231,7 @@
                             </div>
                             <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
                                 <div class="menu-info">
-                                    <img src="img/TE/restaurant/BarEast/2.png" class="img-responsive" alt="Tennessee Location" />
+                                    <img src="img/TE/restaurant/BarEast/2.webp" class="img-responsive" alt="Tennessee Location" />
                                     <div class="location-info">
                                         <h4>Thai Esane East</h4>
                                         <div class="address">
@@ -311,9 +311,9 @@
                             </div>
 
                         </div>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
             
 
                 <!-- Footer - Copyright -->
@@ -331,14 +331,14 @@
                                 <!-- <h1>Recent post</h1>
                                 <div class="footer-blog clearfix">
                                     <a href="./blog_right_sidebar.html">
-                                        <img src="img/thumb8.png" class="img-responsive footer-photo" alt="Placeholder Image">
+                                        <img src="img/thumb8.webp" class="img-responsive footer-photo" alt="Placeholder Image">
                                         <p class="footer-blog-text">Events & News Coming Soon!</p>
                                         <p class="footer-blog-date">Stay Tuned</p>
                                     </a>
                                 </div>
                                 <div class="footer-blog clearfix last">
                                     <a href="./blog_right_sidebar.html">
-                                        <img src="img/thumb8.png" class="img-responsive footer-photo" alt="Placeholder Image">
+                                        <img src="img/thumb8.webp" class="img-responsive footer-photo" alt="Placeholder Image">
                                         <p class="footer-blog-text">Events & News Coming Soon!</p>
                                         <p class="footer-blog-date">Stay Tuned</p>
                                     </a>
@@ -405,8 +405,14 @@
     <script src="js/vendor/mc/main.js"></script>
 
     <script type="text/javascript">
-        var initialZoom = getComputedStyle(document.documentElement).getPropertyValue('--initial-zoom').trim();
-        var mymap = L.map('map', { scrollWheelZoom: false }).setView([39.8283, -98.5795], initialZoom); // Set initial view
+        var initialZoom;
+        if (window.innerWidth <= 767) {
+            initialZoom = 3;  // Zoom level for mobile (adjust as needed)
+        } else {
+            initialZoom = getComputedStyle(document.documentElement).getPropertyValue('--initial-zoom').trim();
+        }
+        var mymap = L.map('map', { scrollWheelZoom: false }).setView([39.8283, -98.5795], initialZoom);
+
       // Set initial view to Nashville
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap);
     
@@ -416,7 +422,7 @@
                 lon: -86.7832,
                 name: "Midtown",
                 details: "1520 Division St, Nashville, TN 37203, USA",
-                type: 'type3',
+                type: 'type4',
                 phone: '(615) 123 4567',
                 orderOnlineUrl: 'https://order.toasttab.com/online/thai-esane',
                 storeDetailsUrl: 'img/TE/Menu.pdf',
@@ -427,7 +433,7 @@
                 lon: -86.7828,
                 name: "Brentwood",
                 details: "203 Franklin Rd suite 100, Brentwood, TN 37027, USA",
-                type: 'type3',
+                type: 'type4',
                 phone: '(615) 123 4567',
                 orderOnlineUrl: 'https://order.toasttab.com/online/thai-esane-203-suite-100-franklin-road',
                 storeDetailsUrl: 'img/TE/Menu.pdf',
@@ -491,10 +497,10 @@
         ];
 
         var icons = {
-        type1: 'img/TE/map/Buddha_Icon1.png',
-        type2: 'img/TE/map/Buddha_Icon2.png',
-        type3: 'img/TE/map/Buddha_Icon3.png',
-        type3: 'img/TE/map/Buddha_Icon4.png'
+        type1: 'img/TE/map/Buddha_Icon1.webp',
+        type2: 'img/TE/map/Buddha_Icon2.webp',
+        type3: 'img/TE/map/Buddha_Icon3.webp',
+        type4: 'img/TE/map/Buddha_Icon4.webp'
         };
 
         var iconSizes = {
@@ -511,16 +517,20 @@
             });
         }
 
-        
 
         var markers = L.markerClusterGroup({
         iconCreateFunction: function(cluster) {
             return new L.Icon({
-                iconUrl: 'img/TE/map/Buddha_Icon1.png',  // replace with your cluster icon path
-                iconSize: [55, 55]  // replace with your cluster icon dimensions
+                iconUrl: 'img/TE/map/Buddha_Icon1.webp',
+                iconSize: [55, 55]
             });
-        }
+        },
+        maxClusterRadius: window.innerWidth <= 768 ? 15 : 40  // Set maxClusterRadius based on window width
     });
+
+
+
+
 
     for (var i = 0; i < stores.length; i++) {
     var store = stores[i];
