@@ -5178,3 +5178,19 @@ z-index: 1;
     max-width: 1200px; /* adjust max-width to fit your design */
     overflow: auto; /* in case the content overflows the container */
 }
+
+.r-section .r-container {
+    max-width: 370px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure containers wrap to the next line when necessary */
+    justify-content: space-between; /* Distribute space between containers */
+    margin-right: auto;
+    margin-left: auto;
+    gap: 20px;
+}
+
+/* Add rounding to the card */
+.card {
+    border-radius: 10px;
+    overflow: hidden; /* Ensure the border-radius is applied correctly */
+}

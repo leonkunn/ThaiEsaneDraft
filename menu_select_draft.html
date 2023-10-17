@@ -28,7 +28,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 </head>
@@ -166,155 +166,120 @@
                             <div id="map" class="map-container"></div>
                         </div>
                     </div>
+
+                    <select id="stateFilter" class="form-select" aria-label="State Filter">
+                        <option value="all" selected>All</option>
+                        <option value="tennessee">Tennessee</option>
+                        <option value="california">California</option>
+                        <option value="oregon">Oregon</option>
+                    </select>
+
+                    <section class="r-section">
+                        <div class="r-container">
+                            <div class="d-flex flex-column justify-content-center gap-3 text-center">
+                                <h3 class="font-crushed">Tennessee</h3>
+                                <div class="row">
+                                    <!-- Tennessee Locations -->
+                                    <div class="col-md-4 tennessee">
+                                        <div class="card text-center">
+                                            <!-- Card 1 content -->
+                                            <img src="img/TE/restaurant/mtinterior.webp" alt="Midtown Location" class="img-fluid img-thumbnail">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Thai Esane - Midtown</h5>
+                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 1520 Division Street, Nashville, TN 37203</p>
+                                                <a href="img/TE/Menu.pdf" class="btn btn-secondary">View Menu</a>
+                                                <a href="https://order.toasttab.com/online/thai-esane" class="btn btn-primary">Order Online</a>
+                                            </div>
+                                        </div>
+                                    </div>
                     
-                    <div class="card-container">
-                    <div class="food-menu wow fadeInUp">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="menu-tags2">
-                                    <span data-filter="*" class="tagsort2-active">All</span>
-                                    <span data-filter=".tennessee">Tennessee</span>
-                                    <span data-filter=".california">California</span>
-                                    <span data-filter=".oregon">Oregon</span>
+                                    <div class="col-md-4 tennessee">
+                                        <div class="card text-center">
+                                            <!-- Card 2 content -->
+                                            <img src="img/TE/restaurant/Brentwood/6 (1).webp" alt="Brentwood Location" class="img-fluid img-thumbnail">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Thai Esane - Brentwood</h5>
+                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 203 Franklin Rd Suite 100, Brentwood, TN 37027</p>
+                                                <a href="img/TE/Menu.pdf" class="btn btn-secondary">View Menu</a>
+                                                <a href="https://order.toasttab.com/online/thai-esane-203-suite-100-franklin-road" class="btn btn-primary">Order Online</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-md-4 tennessee">
+                                        <div class="card text-center">
+                                            <!-- Card 3 content -->
+                                            <img src="img/TE/restaurant/FoodHallEx.webp" alt="Assembly Food Hall Location" class="img-fluid img-thumbnail">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Thai Esane - Assembly Food Hall</h5>
+                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 5036 Broadway, Nashville, TN 37203</p>
+                                                <a href="./menufh.html" class="btn btn-secondary">View Menu</a>
+                                                <a href="https://order.toasttab.com/online/assembly-food-hall-nashville-thai-esane" class="btn btn-primary">Order Online</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Tennessee Locations -->
+                                    <div class="col-md-4 tennessee">
+                                        <div class="card text-center">
+                                            <img src="img/TE/restaurant/BarEast/2.webp" alt="Thai Esane East Location" class="img-fluid img-thumbnail">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Thai Esane East</h5>
+                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 970 Woodland St, Nashville, TN 37206, USA</p>
+                                                <!-- You can add hours information here -->
+                                                <div class="buttons">
+                                                    <!-- Add buttons if needed -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 california">
+                                        <div class="card text-center">
+                                            <img src="img/menu/1/1.1.png" alt="Enclave Location" class="img-fluid img-thumbnail">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Thai Esane Enclave</h5>
+                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 980 W 190th St, Los Angeles, California, 90502</p>
+                                                <!-- You can add buttons here -->
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Oregon Locations -->
+                                    <div class="col-md-4 oregon">
+                                        <div class="card text-center">
+                                            <img src="img/menu/1/1.1.png" alt="Valley River Center Location" class="img-fluid img-thumbnail">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Thai Esane Valley River Center</h5>
+                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 293 Valley River Center, Eugene, OR 97401</p>
+                                                <!-- You can add buttons here -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 oregon">
+                                        <div class="card text-center">
+                                            <!-- Card 2 content -->
+                                            <img src="img/menu/1/1.1.png" alt="Washington Square Location" class="img-fluid img-thumbnail">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Thai Esane Washington Square</h5>
+                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 9585 SW Washington Square Rd, Portland, OR 97223</p>
+                                                <!-- You can add buttons here -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
                                 </div>
                             </div>
                         </div>
-                        <div class="row menu-items2">
-                            <!-- Tennessee Location -->
-                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
-                                <div class="menu-info">
-                                    <img src="img/TE/restaurant/mtinterior.webp" class="img-responsive" alt="Tennessee Location" />
-                                    <div class="location-info">
-                                        <h4>Midtown</h4>
-                                        <div class="address">
-                                            <p><i class="fa fa-map-marker"></i> 1520 Division Street,
-                                                Nashville, TN 37203
-                                                </p>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="img/TE/Menu.pdf" class="btn btn-menu">View Menu</a>
-                                            <a href="https://order.toasttab.com/online/thai-esane" class="btn btn-order">Order Online</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
-                                <div class="menu-info">
-                                    <img src="img/TE/restaurant/Brentwood/6 (1).webp" class="img-responsive" alt="Tennessee Location"/>
-                                    <div class="location-info">
-                                        <h4>Brentwood</h4>
-                                        <div class="address">
-                                            <p><i class="fa fa-map-marker"></i> 203 Franklin Rd Suite 100
-                                                Brentwood, TN 37027</p>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="img/TE/Menu.pdf" class="btn btn-menu">View Menu</a>
-                                            <a href="https://order.toasttab.com/online/thai-esane-203-suite-100-franklin-road" class="btn btn-order">Order Online</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
-                                <div class="menu-info">
-                                    <img src="img/TE/restaurant/FoodHallEx.webp" class="img-responsive" alt="Tennessee Location" />
-                                    <div class="location-info">
-                                        <h4>Assembly Food Hall</h4>
-                                        <div class="address">
-                                            <p><i class="fa fa-map-marker"></i> 5036 Broadway, Nashville, TN 37203</p>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="./menufh.html" class="btn btn-menu">View Menu</a>
-                                            <a href="https://order.toasttab.com/online/assembly-food-hall-nashville-thai-esane" class="btn btn-order">Order Online</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-item2 col-sm-4 col-xs-12 tennessee">
-                                <div class="menu-info">
-                                    <img src="img/TE/restaurant/BarEast/2.webp" class="img-responsive" alt="Tennessee Location" />
-                                    <div class="location-info">
-                                        <h4>Thai Esane East</h4>
-                                        <div class="address">
-                                            <p><i class="fa fa-map-marker"></i> 970 Woodland St, Nashville, TN 37206, USA</p>
-                                        </div>
-                                        <div class="hours">
-                                            <!-- <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
-                                            <p>11:00 am - 9:00 pm</p> -->
-                                        </div>
-                                        <div class="buttons">
-                                            <!-- <a href="./menu.html" class="btn btn-menu">View Menu</a>
-                                            <a href="./order_tennessee.html" class="btn btn-order">Order Online</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- California Location -->
-
-                            <div class="menu-item2 col-sm-4 col-xs-12 california">
-                                <div class="menu-info">
-                                    <img src="img/menu/1/1.1.png" class="img-responsive" alt="Enclave Location" />
-                                    <div class="location-info">
-                                        <h4>Thai Esane Enclave</h4>
-                                        <div class="address">
-                                            <p><i class="fa fa-map-marker"></i> 980 W 190th St, Los Angeles, California, 90502</p>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="./menufh.html" class="btn btn-view">View Menu</a>
-                                            <!-- <a href="./order_california.html" class="btn btn-order">Order Online</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                           <!-- Oregon Location -->
-                            <div class="menu-item2 col-sm-4 col-xs-12 oregon">
-                                <div class="menu-info">
-                                    <img src="img/menu/1/1.1.png" class="img-responsive" alt="Valley River Center Location" />
-                                    <div class="location-info">
-                                        <h4>Thai Esane Valley River Center</h4>
-                                        <div class="address">
-                                            <p><i class="fa fa-map-marker"></i> 293 Valley River Center, Eugene, OR 97401</p>
-                                        </div>
-                                        <!-- Assuming phone number and hours are the same, but you can change them -->
-                                        <!-- <div class="hours">
-                                            <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
-                                            <p>Coming Soon!</p>
-                                        </div> -->
-                                        <div class="buttons">
-                                            <a href="./menufh.html" class="btn btn-menu">View Menu</a>
-                                            <!-- <a href="./order_oregon.html" class="btn btn-order">Order Online</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="menu-item2 col-sm-4 col-xs-12 oregon">
-                                <div class="menu-info">
-                                    <img src="img/menu/1/1.1.png" class="img-responsive" alt="Washington Square Location" />
-                                    <div class="location-info">
-                                        <h4>Thai Esane Washington Square</h4>
-                                        <div class="address">
-                                            <p><i class="fa fa-map-marker"></i> 9585 SW Washington Square Rd, Portland, OR 97223</p>
-                                        </div>
-                                        <!-- <div class="hours">
-                                            <p><i class="fa fa-clock"></i> Monday - Saturday:</p>
-                                            <p>Coming Soon!</p>
-                                        </div> -->
-                                        <div class="buttons">
-                                            <a href="./menufh.html" class="btn btn-menu">View Menu</a>
-                                            <!-- <a href="./order_oregon.html" class="btn btn-order">Order Online</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                    </section>
+                    
                 </div>
-            </div>
-        </div>
-        </section>
+             </section>
             
 
                 <!-- Footer - Copyright -->
@@ -571,6 +536,19 @@
     }
     mymap.addLayer(markers);
     </script>
+
+<script>
+    // jQuery to handle dropdown change event
+    $('#stateFilter').on('change', function() {
+        var selectedState = $(this).val();  // Get selected value from dropdown
+        $('.col-md-4').hide();  // Hide all location containers
+        if (selectedState === 'all') {
+            $('.col-md-4').show();  // Show all location containers if 'All' is selected
+        } else {
+            $('.col-md-4.' + selectedState).show();  // Show location containers of selected state
+        }
+    });
+</script>
 
 </body>
 
