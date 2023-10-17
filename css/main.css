@@ -1243,6 +1243,8 @@ fieldset[disabled] .btn-default.active {
    ----- */
 
    .img-rebrand {
+    padding-top: 10%;
+    margin-bottom: -10%;
     width: 100%;
     height: auto;
 }
@@ -1417,6 +1419,11 @@ fieldset[disabled] .btn-default.active {
     }
 }
 
+@media (max-width: 767px) {
+    .custom-header h1 small {
+        text-align: center !important;
+    }
+}
 
 /* 
    Reservation
@@ -1428,7 +1435,7 @@ fieldset[disabled] .btn-default.active {
 
 .reservation .reservation-form {
     border: 1px solid #f3f1ed;
-    padding: 25px 50px;
+    padding: 25px 10px;
 }
 
 .reservation-form .form-group {
@@ -2398,6 +2405,12 @@ fieldset[disabled] .btn-default.active {
     height: 500px;
 }
 
+/* Style for small screens (tablets, large phones) */
+@media (max-width: 767px) {
+    #map {
+        height: 300px;
+    }
+}
 
 /* ================================================
    Gallery

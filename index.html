@@ -144,8 +144,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="page-header wow fadeInDown">
-                                <h1 class="font-crushed font-xxl" >Thai Esane
-                                    <small class="font-allan font-xl"> A little about us and a brief history of how we started.</small></h1>
+                                <h1 class="font-crushed font-xxl "  >Thai Esane
+                                    <small class="font-allan font-xl "> A little about us and a brief history of how we started.</small></h1>
                             </div>
                         </div>
                     </div>
@@ -170,14 +170,17 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <p class="font-sofialight font-l">
-                                Welcome to Thai Esane, where the vibrant flavors of Thai-Laotian cuisine meet the heart of Nashville. 
-                                Born from the Sayasack family's journey from Isan to America, our dishes are a testament to tradition, 
-                                resilience, and love. Dive into our world of unapologetically authentic flavors, where every bite 
-                                tells a story.
-                            </p>
-                            <br>
-                            <img src="img/signature.png" alt="signature">
+                            <div class="text-center text-md-left"> <!-- This class will center text on mobile and align left on larger screens -->
+                                <p class="font-sofialight font-l">
+                                    Welcome to Thai Esane, where the vibrant flavors of Thai-Laotian cuisine meet the heart of Nashville.
+                                    Born from the Sayasack family's journey from Isan to America, our dishes are a testament to tradition,
+                                    resilience, and love. Dive into our world of unapologetically authentic flavors, where every bite
+                                    tells a story.
+                                </p>
+                            </div>
+                            <div class="text-center"> <!-- This class will center the image on all screen sizes -->
+                                <img src="img/signature.png" alt="signature" class="mx-auto d-block"> <!-- These classes will center the image on mobile -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -425,8 +428,14 @@
     <script src="js/reservation.js"></script>
 
     <script type="text/javascript">
-        var initialZoom = getComputedStyle(document.documentElement).getPropertyValue('--initial-zoom').trim();
-        var mymap = L.map('map', { scrollWheelZoom: false }).setView([39.8283, -98.5795], initialZoom); // Set initial view
+        var initialZoom;
+        if (window.innerWidth <= 767) {
+            initialZoom = 3;  // Zoom level for mobile (adjust as needed)
+        } else {
+            initialZoom = getComputedStyle(document.documentElement).getPropertyValue('--initial-zoom').trim();
+        }
+        var mymap = L.map('map', { scrollWheelZoom: false }).setView([39.8283, -98.5795], initialZoom);
+
       // Set initial view to Nashville
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap);
     
@@ -436,7 +445,7 @@
                 lon: -86.7832,
                 name: "Midtown",
                 details: "1520 Division St, Nashville, TN 37203, USA",
-                type: 'type3',
+                type: 'type4',
                 phone: '(615) 123 4567',
                 orderOnlineUrl: 'https://order.toasttab.com/online/thai-esane',
                 storeDetailsUrl: 'img/TE/Menu.pdf',
@@ -447,7 +456,7 @@
                 lon: -86.7828,
                 name: "Brentwood",
                 details: "203 Franklin Rd suite 100, Brentwood, TN 37027, USA",
-                type: 'type3',
+                type: 'type4',
                 phone: '(615) 123 4567',
                 orderOnlineUrl: 'https://order.toasttab.com/online/thai-esane-203-suite-100-franklin-road',
                 storeDetailsUrl: 'img/TE/Menu.pdf',
@@ -514,7 +523,7 @@
         type1: 'img/TE/map/Buddha_Icon1.png',
         type2: 'img/TE/map/Buddha_Icon2.png',
         type3: 'img/TE/map/Buddha_Icon3.png',
-        type3: 'img/TE/map/Buddha_Icon4.png'
+        type4: 'img/TE/map/Buddha_Icon4.png'
         };
 
         var iconSizes = {
@@ -534,13 +543,15 @@
         
 
         var markers = L.markerClusterGroup({
+        maxClusterRadius: 15,  // Adjust this value to change cluster size
         iconCreateFunction: function(cluster) {
             return new L.Icon({
-                iconUrl: 'img/TE/map/Buddha_Icon1.png',  // replace with your cluster icon path
-                iconSize: [55, 55]  // replace with your cluster icon dimensions
+                iconUrl: 'img/TE/map/Buddha_Icon1.png',
+                iconSize: [55, 55]
             });
         }
     });
+
 
     for (var i = 0; i < stores.length; i++) {
     var store = stores[i];
