@@ -1158,7 +1158,9 @@ fieldset[disabled] .btn-default.active {
 
 @media (max-width: 768px) {
     .home2 {
-        height: 40vh;  /* Adjusted height for mobile devices */
+        height: 60vh;
+        background: url(../img/TE/hqphoto/PadKaPowTop.png) no-repeat center center fixed !important;
+        background-size: cover !important;  /* Adjusted height for mobile devices */
     }
 }
 
@@ -1225,6 +1227,14 @@ fieldset[disabled] .btn-default.active {
     left: 50%;
     transform: translateX(-50%);
 }
+
+@media (max-width: 768px) {
+    .home2 .tittle-block img {
+        height: 200px;
+    }
+
+}
+
 
 @media (max-width: 768px) {
     .home .tittle-block img {
