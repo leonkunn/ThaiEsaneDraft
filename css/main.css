@@ -1253,15 +1253,16 @@ fieldset[disabled] .btn-default.active {
    ----- */
 
    .img-rebrand {
-    padding-top: 10%;
-    margin-bottom: -10%;
+    padding-top: 2%;
+    margin-bottom: 0%;
     width: 100%;
     height: auto;
 }
 
 @media (min-width: 768px) {
     .img-rebrand {
-        width: 650px;  /* Sets a fixed width on larger screens */
+        width: 650px;
+        padding-top: 5%;  /* Sets a fixed width on larger screens */
     }
 }
 
