@@ -4993,7 +4993,7 @@ z-index: 1;
 @media (max-width: 767px) {
     .icon-block {
         text-align: center !important; /* Center the text on small screens */
-        margin-bottom: 20px; /* Add some spacing between the blocks on small screens */
+        margin-bottom: 10px; /* Add some spacing between the blocks on small screens */
     }
 }
 
@@ -5180,7 +5180,7 @@ z-index: 1;
 }
 
 .r-section .r-container {
-    max-width: 370px;
+    max-width: 1140px;
     display: flex;
     flex-wrap: wrap; /* Ensure containers wrap to the next line when necessary */
     justify-content: space-between; /* Distribute space between containers */
@@ -5193,4 +5193,29 @@ z-index: 1;
 .card {
     border-radius: 10px;
     overflow: hidden; /* Ensure the border-radius is applied correctly */
+    padding: 20px; /* Add padding as desired */
+}
+
+#stateFilter {
+    width: 100%;
+    padding: 12px; /* Increase padding to make it taller */
+    border-radius: 15px;
+    text-align: center;
+    background-color: white; /* Set background to white */
+    font-size: 18px;
+    margin-top: 40px; /* Adjust text size to make it larger */
+}
+
+#stateFilter option:checked {
+    text-align: center;
+}
+
+#map {
+    /* Add margin or padding as needed to create space between the map and the select element */
+    margin-bottom: 20px; /* Adjust the value to your preference */
+}
+
+.with-border {
+    border-bottom: 1px solid #000; /* Change #000 to any color you prefer */
+    padding-bottom: 10px; /* Optional: adds some space between the text and the line */
 }

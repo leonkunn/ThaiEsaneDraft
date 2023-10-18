@@ -132,40 +132,49 @@
                 </div>
             </section>
             
-<!-- 
-            <img src="/img/TE/borders/2.png" alt="Border Image" style="width: 100%; display: block; margin-top: -10px;">
-             -->
 
             <section class="menu menu2">
                 <div class="container">
-                    <div class="padding-tb-75">
+
+                    <!-- Map Code -->
+                    <!-- <div class="">
                         <div class="page-header wow fadeInDown">
                             <h1><small>CHOOSE A LOCATION TO VIEW A MENU</small></h1>
                         </div>
-                        <div class="padding-tb-75">
-                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/1.webp" height="55" width="55">
-                                Multiple Stores
-                            </div>
-                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/2.webp" height="55" width="55">
-                                Coming Soon
-                            </div>
-                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/3.webp" height="55" width="55">
-                                Food Hall - Opened
-                            </div>
-                            <div class="col-sm-3 text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
-                                <img alt="Multiple Stores Icon" src="img/TE/map2/4.webp" height="55" width="55">
-                                Brick & Mortar - Opened
+
+                            <div class="row padding-tb-75">
+                                <div class="col-md-3 col-sm-6 text-center mb-3">
+                                    <div class="text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                        <img alt="Multiple Stores Icon" src="img/TE/map2/1.webp" height="55" width="55">
+                                        Multiple Stores
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 text-center mb-3">
+                                    <div class="text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                        <img alt="Multiple Stores Icon" src="img/TE/map2/2.webp" height="55" width="55">
+                                        Coming Soon
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 text-center mb-3">
+                                    <div class="text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                        <img alt="Multiple Stores Icon" src="img/TE/map2/3.webp" height="55" width="55">
+                                        Food Hall - Opened
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 text-center mb-3">
+                                    <div class="text-uppercase font-allan icon-block" style="font-weight: bold !important; font-size: 20px !important;">
+                                        <img alt="Multiple Stores Icon" src="img/TE/map2/4.webp" height="55" width="55">
+                                        Brick & Mortar - Opened
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row padding-tb-20">
+                    
+                    <div class="">
                         <div class="col-md-12">
-                            <div id="map" class="map-container"></div>
+                            <div id="map" class="map-container "></div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <select id="stateFilter" class="form-select" aria-label="State Filter">
                         <option value="all" selected>All</option>
@@ -177,10 +186,11 @@
                     <section class="r-section">
                         <div class="r-container">
                             <div class="d-flex flex-column justify-content-center gap-3 text-center">
-                                <h3 class="font-crushed">Tennessee</h3>
+                                <h3 id="header-tennessee" class="font-crushed tennessee">Tennessee</h3>
+                                <hr />
                                 <div class="row">
                                     <!-- Tennessee Locations -->
-                                    <div class="col-md-4 tennessee">
+                                    <div class="col-md-4 tennessee location-container">
                                         <div class="card text-center">
                                             <!-- Card 1 content -->
                                             <img src="img/TE/restaurant/mtinterior.webp" alt="Midtown Location" class="img-fluid img-thumbnail">
@@ -193,7 +203,7 @@
                                         </div>
                                     </div>
                     
-                                    <div class="col-md-4 tennessee">
+                                    <div class="col-md-4 tennessee location-container">
                                         <div class="card text-center">
                                             <!-- Card 2 content -->
                                             <img src="img/TE/restaurant/Brentwood/6 (1).webp" alt="Brentwood Location" class="img-fluid img-thumbnail">
@@ -206,7 +216,7 @@
                                         </div>
                                     </div>
                     
-                                    <div class="col-md-4 tennessee">
+                                    <div class="col-md-4 tennessee location-container">
                                         <div class="card text-center">
                                             <!-- Card 3 content -->
                                             <img src="img/TE/restaurant/FoodHallEx.webp" alt="Assembly Food Hall Location" class="img-fluid img-thumbnail">
@@ -220,64 +230,75 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <!-- Tennessee Locations -->
-                                    <div class="col-md-4 tennessee">
-                                        <div class="card text-center">
-                                            <img src="img/TE/restaurant/BarEast/2.webp" alt="Thai Esane East Location" class="img-fluid img-thumbnail">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Thai Esane East</h5>
-                                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> 970 Woodland St, Nashville, TN 37206, USA</p>
-                                                <!-- You can add hours information here -->
-                                                <div class="buttons">
-                                                    <!-- Add buttons if needed -->
+                                        <!-- Tennessee Locations -->
+                                        <div class="col-md-4 tennessee location-container">
+                                            <div class="card text-center">
+                                                <img src="img/TE/restaurant/BarEast/2.webp" alt="Thai Esane East Location" class="img-fluid img-thumbnail">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Thai Esane East</h5>
+                                                    <p class="card-text"><i class="fas fa-map-marker-alt"></i> 970 Woodland St, Nashville, TN 37206, USA</p>
+                                                    <!-- You can add hours information here -->
+                                                    <div class="buttons">
+                                                        <a href="#" class="btn btn-secondary disabled" disabled>View Menu <br> Coming Soon</a>
+                                                        <a href="#" class="btn btn-primary disabled" disabled>Order Online <br> Coming soon</a>                                                    
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 california">
+                                </div>
+                                <div class="row">
+                                    <h3 id="header-california" class="font-crushed california">California</h3>
+                                    <div class="col-md-4 california location-container">
                                         <div class="card text-center">
                                             <img src="img/menu/1/1.1.png" alt="Enclave Location" class="img-fluid img-thumbnail">
                                             <div class="card-body">
                                                 <h5 class="card-title">Thai Esane Enclave</h5>
                                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i> 980 W 190th St, Los Angeles, California, 90502</p>
-                                                <!-- You can add buttons here -->
+                                                <div class="buttons">
+                                                    <a href="#" class="btn btn-secondary disabled" disabled>View Menu <br> Coming Soon</a>
+                                                    <a href="#" class="btn btn-primary disabled" disabled>Order Online <br> Coming soon</a>                                                    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                    
-                                    <!-- Oregon Locations -->
-                                    <div class="col-md-4 oregon">
+                                </div>
+                                <div class="row">
+                                    <h3 id="header-oregon" class="font-crushed oregon">Oregon</h3>
+                                    <div class="col-md-4 oregon location-container">
                                         <div class="card text-center">
                                             <img src="img/menu/1/1.1.png" alt="Valley River Center Location" class="img-fluid img-thumbnail">
                                             <div class="card-body">
                                                 <h5 class="card-title">Thai Esane Valley River Center</h5>
                                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i> 293 Valley River Center, Eugene, OR 97401</p>
-                                                <!-- You can add buttons here -->
+                                                <div class="buttons">
+                                                    <a href="#" class="btn btn-secondary disabled" disabled>View Menu <br> Coming Soon</a>
+                                                    <a href="#" class="btn btn-primary disabled" disabled>Order Online <br> Coming soon</a>                                                    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4 oregon">
+                                
+                                    <div class="col-md-4 oregon location-container">
                                         <div class="card text-center">
                                             <!-- Card 2 content -->
                                             <img src="img/menu/1/1.1.png" alt="Washington Square Location" class="img-fluid img-thumbnail">
                                             <div class="card-body">
                                                 <h5 class="card-title">Thai Esane Washington Square</h5>
                                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i> 9585 SW Washington Square Rd, Portland, OR 97223</p>
-                                                <!-- You can add buttons here -->
+                                                <div class="buttons">
+                                                    <a href="#" class="btn btn-secondary disabled" disabled>View Menu <br> Coming Soon</a>
+                                                    <a href="#" class="btn btn-primary disabled" disabled>Order Online <br> Coming soon</a>                                                    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    
                                 </div>
-                            </div>
-                        </div>
+
+                                </div>
+
                     </section>
-                    
+
                 </div>
              </section>
             
@@ -539,16 +560,47 @@
 
 <script>
     // jQuery to handle dropdown change event
-    $('#stateFilter').on('change', function() {
-        var selectedState = $(this).val();  // Get selected value from dropdown
-        $('.col-md-4').hide();  // Hide all location containers
-        if (selectedState === 'all') {
-            $('.col-md-4').show();  // Show all location containers if 'All' is selected
-        } else {
-            $('.col-md-4.' + selectedState).show();  // Show location containers of selected state
-        }
-    });
+// jQuery to handle dropdown change event
+$('#stateFilter').on('change', function() {
+    var selectedState = $(this).val();  // Get selected value from dropdown
+    $('.location-container').hide();  // Hide all location containers
+    if (selectedState === 'all') {
+        $('.location-container').show();  // Show all location containers if 'All' is selected
+    } else {
+        $('.location-container.' + selectedState).show();  // Show location containers of selected state
+    }
+});
+
+    document.getElementById('stateFilter').addEventListener('change', function() {
+    var selectedState = this.value;
+    
+    // Function to toggle display
+    function toggleDisplay(state, display) {
+        document.getElementById('header-' + state).style.display = display;
+    }
+
+    if (selectedState === 'all') {
+        // Show all headers if 'All' is selected
+        toggleDisplay('tennessee', 'block');
+        toggleDisplay('california', 'block');
+        toggleDisplay('oregon', 'block');
+    } else {
+        // Hide all headers
+        toggleDisplay('tennessee', 'none');
+        toggleDisplay('california', 'none');
+        toggleDisplay('oregon', 'none');
+
+        // Show the header corresponding to the selected state
+        toggleDisplay(selectedState, 'block');
+    }
+});
+
+
 </script>
+
+
+
+
 
 </body>
 
